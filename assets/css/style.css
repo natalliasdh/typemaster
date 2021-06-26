@@ -301,6 +301,8 @@ h2 {
         background-image: url("../images/desktop/image-phone-and-keyboard.jpg");
         height: 480px;
         margin-left: 0px;
+        background-color: #F16718;
+        background-blend-mode: multiply;
     }
     .keyboard {
         background-image: url("../images/desktop/image-glass-and-keyboard.jpg");
