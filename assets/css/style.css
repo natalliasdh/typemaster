@@ -172,7 +172,6 @@ span {
 
 .sidebar2 {
     background-image: url(../images/image-keyboard.jpg);
-    background-color: red;
     background-repeat: no-repeat;
     height: 331px;
     width: 90%;
@@ -183,6 +182,13 @@ span {
     margin-left: 10%;
     margin-right: 0;
     box-sizing: border-box;
+}
+
+@media only screen and (max-width:360px) {
+    .sidebar2 {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 @media only screen and (min-width:768px) {
