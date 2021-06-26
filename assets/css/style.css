@@ -17,6 +17,7 @@ body {
     color: #162542;
     line-height: 26px;
     box-sizing: border-box;
+    padding: 0;
 }
 
 footer {
@@ -30,10 +31,12 @@ footer {
 
 .sidebar1 {
     grid-area: sidebar1;
+    background-color: blue;
 }
 
 .sidebar2 {
     grid-area: sidebar2;
+    background-color: red;
 }
 
 .sidebar3 {
@@ -53,13 +56,14 @@ footer {
 
 .sidebar6 {
     grid-area: sidebar6;
-    margin-left: 30px;
     background-image: url("../images/pattern-square.svg");
     background-repeat: no-repeat;
+    display: none;
 }
 
 .content {
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(5, auto) 1fr;
     grid-template-areas: "header" "sidebar1" "sidebar2" "sidebar3" "sidebar4" "sidebar5";
 }
@@ -73,10 +77,13 @@ footer {
         width: 175px;
         height: 58px;
     }
+    .header {
+        padding: 40px 40px 64px 40px;
+    }
 }
 
 .header {
-    padding: 40px 40px 64px 40px;
+    padding: 40px 24px 64px 24px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -90,6 +97,10 @@ footer {
     }
     .header {
         padding: 55px 0 83px 0;
+    }
+    .sidebar6 {
+        display: block;
+        margin-left: 30px;
     }
 }
 
@@ -125,8 +136,8 @@ button {
     display: flex;
     flex-direction: column;
     margin-bottom: 64px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .preorder {
@@ -166,13 +177,15 @@ span {
 
 .sidebar2 {
     background-image: url(../images/image-keyboard.jpg);
+    background-color: red;
     height: 331px;
     width: 100%;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
-    margin-left: 40px;
     border-radius: 20px 0 0 20px;
     margin-bottom: 24px;
+    margin-left: 24px;
 }
 
 @media only screen and (min-width:768px) {
@@ -184,6 +197,8 @@ span {
     .sidebar1 {
         height: 425px;
         justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
@@ -200,5 +215,85 @@ span {
     .sidebar1 {
         margin-left: 0;
         padding-left: 0;
+        height: 480px;
+    }
+}
+
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+.twoimages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.orange {
+    background-image: url("../images/image-phone-and-keyboard.jpg");
+    height: 193px;
+    flex-basis: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.keyboard {
+    background-image: url("../images/image-glass-and-keyboard.jpg");
+    height: 193px;
+    flex-basis: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 24px;
+    margin-right: 24px;
+    border-radius: 20px;
+}
+
+.sidebar4 {
+    margin-top: 75px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    margin-bottom: 111px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+@media only screen and (min-width:768px) {
+    .twoimages {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .orange {
+        background-image: url("../images/tablet/image-phone-and-keyboard.jpg");
+        height: 320px;
+        margin-left: 40px;
+    }
+    .keyboard {
+        background-image: url("../images/tablet/image-glass-and-keyboard.jpg");
+        height: 320px;
+        margin-left: 30px;
+        margin-right: 40px;
+    }
+    .sidebar4 {
+        margin-top: 75px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    h2 {
+        flex-basis: 30%;
+    }
+    .sidebar4 p {
+        background-color: aqua;
+        margin-left: 10%;
     }
 }
