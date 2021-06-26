@@ -46,7 +46,6 @@ footer {
 }
 
 .sidebar5 {
-    background-color: yellow;
     grid-area: sidebar5;
 }
 
@@ -64,6 +63,14 @@ footer {
     grid-template-areas: "header" "sidebar1" "sidebar2" "sidebar3" "sidebar4" "sidebar5";
 }
 
+.header {
+    padding: 40px 24px 64px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media only screen and (min-width:768px) {
     .content {
         grid-template-columns: 60% 40%;
@@ -76,14 +83,6 @@ footer {
     .header {
         padding: 40px 40px 64px 40px;
     }
-}
-
-.header {
-    padding: 40px 24px 64px 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 @media only screen and (min-width:1400px) {
@@ -319,4 +318,90 @@ h2 {
     .sidebar4 p {
         margin-left: 0;
     }
+}
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+.sidebar5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.orangeback {
+    margin: 0 auto;
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+    background-color: #F16718;
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.orangeback img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.sidebar5 p {
+    margin-bottom: 64px;
+}
+
+@media only screen and (min-width:768px) {
+    .sidebar5 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .sidebar5 p {
+        margin-bottom: 72px;
+    }
+    .square {
+        flex-basis: 45%;
+    }
+    .orangeback {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width:1400px) {
+    .sidebar5 {
+        margin-top: 168px;
+        padding-left: 0px;
+        padding-right: 0px;
+        flex-wrap: nowrap;
+    }
+    .sidebar5 p {
+        margin-bottom: 72px;
+    }
+    .orangeback {
+        margin-left: 0;
+    }
+    .square {
+        flex-basis: 20%;
+    }
+}
+
+footer {
+    margin-top: 100px;
+    padding: 50px;
+    text-align: center;
+    color: #7B8BAD;
 }
